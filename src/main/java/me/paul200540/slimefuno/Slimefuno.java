@@ -28,10 +28,10 @@ public class Slimefuno extends JavaPlugin implements SlimefunAddon {
          * 1. Creating a new Category
          * This Category will use the following ItemStack
          */
-        ItemStack categoryItem = new CustomItem(Material.DIAMOND, "&4Addon Category", "", "&a> Click to open");
+        ItemStack categoryItem = new CustomItem(Material.SLIME_BLOCK, "&a&lSlimefuno", "", "&a> Click to open");
 
         // Give your Category a unique id.
-        NamespacedKey categoryId = new NamespacedKey(this, "addon_category");
+        NamespacedKey categoryId = new NamespacedKey(this, "Slimefuno");
         Category category = new Category(categoryId, categoryItem);
 
         /*
