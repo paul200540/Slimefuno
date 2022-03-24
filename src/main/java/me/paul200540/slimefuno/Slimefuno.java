@@ -42,6 +42,7 @@ public class Slimefuno extends JavaPlugin implements SlimefunAddon {
          */
         SlimefunItemStack CLEAR_SLIME = new SlimefunItemStack("CLEAR_SLIME", Material.LIME_STAINED_GLASS, "&a&lClear &2&lSlime", "&a&lSlime that's clear??? Woah!");
         SlimefunItemStack CONDENSED_SLIME = new SlimefunItemStack("CONDENSED_SLIME", Material.SLIME_BLOCK, "&a&lCondensed &2&lSlime", "&a&lIt's so condensed that you", "&a&lcan't even see through it!");
+        SlimefunItemStack SLIME_HAIR = new SlimefunItemStack("SLIME_HAIR", Material.STRING, "&a&lSlime &2&lHair", "&a&lIt's so soft and fluffy that you can", "&a&ljust curl your fingers around it!");
         CLEAR_SLIME.addUnsafeEnchantment(Enchantment.SILK_TOUCH, 5);
         /*
          * 3. Creating a Recipe
@@ -52,6 +53,7 @@ public class Slimefuno extends JavaPlugin implements SlimefunAddon {
          */
         ItemStack[] ClearSlimeRecipe = { new ItemStack(Material.SLIME_BLOCK), new ItemStack(Material.SLIME_BLOCK), new ItemStack(Material.SLIME_BLOCK), new ItemStack(Material.SLIME_BLOCK), new ItemStack(Material.GLASS), new ItemStack(Material.SLIME_BLOCK), new ItemStack(Material.SLIME_BLOCK), new ItemStack(Material.SLIME_BLOCK), new ItemStack(Material.SLIME_BLOCK) };
         ItemStack[] CondensedSlimeRecipe = {CLEAR_SLIME, CLEAR_SLIME, CLEAR_SLIME, CLEAR_SLIME, CLEAR_SLIME, CLEAR_SLIME, CLEAR_SLIME, CLEAR_SLIME, CLEAR_SLIME};
+        ItemStack[] SlimeHairRecipe = {new ItemStack(Material.STRING), new ItemStack(Material.STRING), new ItemStack(Material.STRING), new ItemStack(Material.STRING), new ItemStack(Material.SLIME_BALL), new ItemStack(Material.STRING), new ItemStack(Material.STRING), new ItemStack(Material.STRING), new ItemStack(Material.STRING)};
         /*
          * 4. Registering the Item
          * Now you just have to register the item.
@@ -61,8 +63,10 @@ public class Slimefuno extends JavaPlugin implements SlimefunAddon {
          */
         SlimefunItem item = new SlimefunItem(category, CLEAR_SLIME, RecipeType.MAGIC_WORKBENCH, ClearSlimeRecipe);
         SlimefunItem item2 = new SlimefunItem(category, CONDENSED_SLIME, RecipeType.MAGIC_WORKBENCH, CondensedSlimeRecipe);
+        SlimefunItem item3 = new SlimefunItem(category, SLIME_HAIR, RecipeType.MAGIC_WORKBENCH, SlimeHairRecipe);
         item.register(this);
         item2.register(this);
+        item3.register(this);
     }
 
     @Override
