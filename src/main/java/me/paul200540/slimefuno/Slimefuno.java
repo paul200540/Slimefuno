@@ -30,13 +30,10 @@ public class Slimefuno extends JavaPlugin implements SlimefunAddon {
          * This Category will use the following ItemStack
          */
         ItemStack categoryItem = new CustomItem(SkullItem.fromHash("4934a9f5ab1789a7d8dd96d32493cdacff577d8c81e7b23917dff2e32bd0bc10"), "&a&lSlimefuno", "", "&a> Click to open");
-        ItemStack categoryItem2 = new CustomItem(SkullItem.fromHash("4934a9f5ab1789a7d8dd96d32493cdacff577d8c81e7b23917dff2e32bd0bc10"), "&a&lSlimefuno2", "", "&a> Click to open");
 
         // Give your Category a unique id.
         NamespacedKey categoryId = new NamespacedKey(this, "Slimefuno");
-        NamespacedKey categoryId2 = new NamespacedKey(this, "Slimefuno2");
         Category category = new Category(categoryId, categoryItem);
-        Category category2 = new Category(categoryId2, categoryItem2);
 
         /*
          * 2. Create a new SlimefunItemStack
@@ -66,7 +63,7 @@ public class Slimefuno extends JavaPlugin implements SlimefunAddon {
          */
         SlimefunItem item = new SlimefunItem(category, CLEAR_SLIME, RecipeType.MAGIC_WORKBENCH, ClearSlimeRecipe);
         SlimefunItem item2 = new SlimefunItem(category, CONDENSED_SLIME, RecipeType.MAGIC_WORKBENCH, CondensedSlimeRecipe);
-        SlimefunItem item3 = new SlimefunItem(category2, SLIME_HAIR, RecipeType.MAGIC_WORKBENCH, SlimeHairRecipe);
+        SlimefunItem item3 = new SlimefunItem(category, SLIME_HAIR, RecipeType.MAGIC_WORKBENCH, SlimeHairRecipe);
         item.register(this);
         item2.register(this);
         item3.register(this);
